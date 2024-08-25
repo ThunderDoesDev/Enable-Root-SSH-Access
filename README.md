@@ -71,9 +71,11 @@ This project is licensed under the APACHE License - see the [LICENSE](LICENSE) f
 
 Contributions are welcome! Please submit a pull request or open an issue to suggest improvements or report bugs.
 
-## Contact
+## Support
 
-For any questions or support, please open an issue in this repository.
+For support, issues, or enhancements, please open an issue in this repository or join our discord support server.
+
+[Join Support Server](https://discord.gg/thunderdoesdev)
 
 ---
 
