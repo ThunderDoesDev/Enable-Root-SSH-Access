@@ -1,8 +1,10 @@
 #!/bin/bash
 
+# Global variables
 SSH_CONFIG="/etc/ssh/sshd_config"
 SCRIPT_PATH=$(realpath "$0")
 
+# Function to update SSH configuration
 update_ssh_config() {
     local config_file=$1
 
@@ -17,6 +19,7 @@ update_ssh_config() {
     fi
 }
 
+# Function to set root password
 set_root_password() {
     if ! sudo passwd root; then
         printf "Error: Failed to set root password.\n" >&2
@@ -24,14 +27,15 @@ set_root_password() {
     fi
 }
 
+# Function to restart SSH service, checking for sshd or ssh
 restart_ssh_service() {
-    if systemctl list-units --full -all | grep -qE '^sshd\.service'; then
+    if sudo systemctl is-active --quiet sshd; then
         if ! sudo systemctl restart sshd; then
             printf "Error: Failed to restart sshd service.\n" >&2
             return 1
         fi
         printf "sshd service restarted successfully.\n"
-    elif systemctl list-units --full -all | grep -qE '^ssh\.service'; then
+    elif sudo systemctl is-active --quiet ssh; then
         if ! sudo systemctl restart ssh; then
             printf "Error: Failed to restart ssh service.\n" >&2
             return 1
@@ -43,6 +47,7 @@ restart_ssh_service() {
     fi
 }
 
+# Function to delete the script file
 delete_script() {
     if ! rm -f "$SCRIPT_PATH"; then
         printf "Error: Failed to delete the script file at %s\n" "$SCRIPT_PATH" >&2
@@ -51,6 +56,7 @@ delete_script() {
     printf "Script file %s has been deleted.\n" "$SCRIPT_PATH"
 }
 
+# Main function
 main() {
     update_ssh_config "$SSH_CONFIG" || return 1
     set_root_password || return 1
