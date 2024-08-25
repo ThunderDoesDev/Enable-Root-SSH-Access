@@ -19,15 +19,15 @@ This script, `enable_root.sh`, is designed to enable root login via SSH on a Lin
 
 1. **Download the Script**: Clone the repository or download the script directly.
 
-    ```bash
-    git clone https://github.com/yourusername/yourrepository.git
-    cd yourrepository
+   ```bash
+    git clone https://github.com/ThunderDoesDev/Enable-Root-SSH-Access.git
+    cd Enable-Root-SSH-Access
     ```
 
     Alternatively, download it directly:
 
     ```bash
-    wget https://raw.githubusercontent.com/yourusername/yourrepository/main/enable_root.sh
+    wget https://raw.githubusercontent.com/ThunderDoesDev/Enable-Root-SSH-Access/main/enable_root.sh
     ```
 
 2. **Make the Script Executable**:
