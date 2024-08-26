@@ -15,6 +15,8 @@ This repository contains scripts designed to enable root login via SSH on a Linu
 - **Root Password Setup**: Prompts the user to set a new root password.
 - **Service Detection and Restart**: Automatically detects and restarts the appropriate SSH service (`sshd` or `ssh`).
 - **Self-Deletion**: Deletes the script after successful execution to prevent unauthorized reuse.
+- **Error Handling**: Comprehensive error handling is implemented in each script to ensure that any failures during the script execution are reported, and appropriate action is taken.
+- **Logging**: The scripts log significant actions and errors to a log file for easier troubleshooting and audit trails.
 
 ## Requirements
 
@@ -74,6 +76,8 @@ This repository contains scripts designed to enable root login via SSH on a Linu
     - You will be prompted to set a new root password.
     - The script will automatically detect and restart the appropriate SSH service (`sshd` or `ssh`).
     - After successful execution, the script will delete itself.
+    - **Error Handling**: If any step fails (e.g., configuration update, service restart), the script will log the error and exit gracefully.
+    - **Logging**: Actions and errors are logged to `/var/log/ssh_config_update.log` for later review.
 
 ### Python Version
 
@@ -95,6 +99,8 @@ This repository contains scripts designed to enable root login via SSH on a Linu
     - You will be prompted to set a new root password.
     - The script will automatically detect and restart the appropriate SSH service (`sshd` or `ssh`).
     - After successful execution, the script will delete itself.
+    - **Error Handling**: The Python script includes error handling that captures issues during execution, logs them, and exits with an appropriate error message.
+    - **Logging**: Actions and errors are logged to `/var/log/ssh_config_update.log`.
 
 ### Node.js Version
 
@@ -116,6 +122,8 @@ This repository contains scripts designed to enable root login via SSH on a Linu
     - You will be prompted to set a new root password.
     - The script will automatically detect and restart the appropriate SSH service (`sshd` or `ssh`).
     - After successful execution, the script will delete itself.
+    - **Error Handling**: The Node.js script handles errors by logging any issues encountered during execution and exiting with a message.
+    - **Logging**: All actions and errors are logged to `/var/log/ssh_config_update.log`.
 
 ## Security Considerations
 
@@ -137,6 +145,8 @@ This repository contains scripts designed to enable root login via SSH on a Linu
   PermitRootLogin yes
   PasswordAuthentication yes
   ```
+
+- **Log File Review**: If the script fails or you encounter issues, check the log file at `/var/log/ssh_config_update.log` for detailed error messages and actions taken by the script.
 
 ## License
 
