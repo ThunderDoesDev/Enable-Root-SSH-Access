@@ -1,7 +1,3 @@
-Apologies for the oversight. I'll update the README to include the details for the Node.js and Python versions of the script as well.
-
----
-
 # Enable Root SSH Access Script
 
 This repository contains scripts designed to enable root login via SSH on a Linux server. The scripts update the SSH configuration to allow root login and password authentication, prompt the user to set the root password, restart the SSH service, and then delete themselves after successful execution.
