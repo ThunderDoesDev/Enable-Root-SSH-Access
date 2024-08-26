@@ -67,10 +67,6 @@ This script, `enable_root.sh`, is designed to enable root login via SSH on a Lin
 
 This project is licensed under the APACHE License - see the [LICENSE](LICENSE) file for details.
 
-## Contributing
-
-Contributions are welcome! Please submit a pull request or open an issue to suggest improvements or report bugs.
-
 ## Support
 
 For support, issues, or enhancements, please open an issue in this repository or join our discord support server.
