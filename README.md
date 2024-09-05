@@ -1,4 +1,4 @@
-# Enable Root SSH Access Script
+# Enable Root SSH Access
 
 This repository contains scripts designed to enable root login via SSH on a Linux server. The scripts update the SSH configuration to allow root login and password authentication, prompt the user to set the root password, restart the SSH service, and then delete themselves after successful execution.
 
