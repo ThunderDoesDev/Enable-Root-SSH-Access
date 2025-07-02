@@ -1,0 +1,9 @@
+{
+  "name": "enable-root-ssh-access",
+  "version": "1.0.0",
+  "description": "Scripts to enable root login via SSH",
+  "main": "enable_root.js",
+  "scripts": {
+    "test": "node test/test.js"
+  }
+}
